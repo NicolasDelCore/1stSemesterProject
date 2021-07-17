@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Obligatorio P1</title>
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+
+            <ul id="navPrincipal">
+
+                <div id="menuPE">
+                    <li>
+                        <a style=font-size:10px id="btnBuscarEjsPE">Ejercicios</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnEntregasPE">Entregas</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnEjsResueltosPE">Ejercicios resueltos</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnStatsPE">Estadísticas</a>
+                    </li>
+                </div>
+
+                <div id="menuPP">
+                    <li>
+                        <a style=font-size:10px id="btnNivelacionPP">Nivelación</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnDevolucionesPP">Devoluciones</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnEjsNuevosPP">Plantear ejercicios</a>
+                    </li>
+                    <li>
+                        <a style=font-size:10px id="btnStatsPP">Estadísticas</a>
+                    </li>
+                </div>
+
+            </ul>
+
+            <!--USUARIO LOGUEADO-->
+            <div class="loginMenu">
+                <span id="loggedInUser"></span>
+                <a class="sesionLinks" id="terminarSesionHTML">Terminar sesión</a> <!--BOTÓN DE TERMINAR SESIÓN-->
+            </div>
+            <br>
+
+            <!--LOGIN-->
+            <div class="loginMenu" id="loginMenuEsperando">
+                Usuario <br><input type="text" placeholder="Escriba su usuario" id="loginUsernameHTML"><br>
+                Contraseña <br><input type="password" placeholder="Escriba su contraseña" id="loginPasswordHTML"><br>
+                <br>
+                <button id="btnLoginHTML">Entrar</button>
+                <br><br>
+                <div id="loginError"></div> <!--PARA MOSTRAR ERROR AL LOGUEARSE-->
+                
+                
+                <!--OPCIÓN DE REGISTRARSE-->
+                <div class="textoAlCentro" id="divRegistroHTML">
+                    ¿No estás registrado? <a class="sesionLinks" id="btnRegistroHTML">Registrarse</a>
+                    <br>
+                </div>
+            </div>            
+
+        </div><!-- FIN CABEZAL -->
+
+        <!--BLOG, RECIDOR DE USUARIOS NO LOGUEADOS-->
+        <!--Hay una clase CSS para reemplazar los href luego..-->
+        <div class="contenido" id="blogRecibidorGlobal">
+            <h3>¡Bienvenidos a la Escuela de Guitarra!</h3>
+            <hr>
+            <br>
+            <h3><strong>¡Le damos la bienvenida al profesorado a Juan, otro pelado metalero!</strong></h3>
+            Algunos alumnos están preocupados por la cantidad de materias donde los reflejos "del sol y/o de las luces" evitan la correcta lectura del pizarrón.
+            <h6>05/05/2021</h6>
+            <a href="">Leer más</a>
+            <hr>
+            <br>
+            <h3><strong>Nota al alumnado:</strong></h3>
+            Por favor, DEJEN DE ROMPER LAS GUITARRAS A PROPÓSITO.<br>Y especialmente, POR FAVOR, ¡dejen de prenderlas fuego!<br>Ya es la tercera vez que tenemos que advertirlo.<br> Eso NO es "rock", es caro.
+            <h6>27/04/2021</h6>
+            <a href="">Leer más</a>
+            <hr>
+            <br>
+            <h3><strong>Atención nuevos y no-tan-nuevos alumnos:</strong></h3>
+            Registrarse a la página como profesor, se considerará una falta EXTREMADAMENTE GRAVE. Es inaceptable cambiar notas "aunque sea una broma". El profesorado no nació ayer.
+            <h6>13/03/2021</h6>
+            <a href="">Leer más</a>
+            <hr>
+            <br>
+            <h3><strong>Atención alumnos</strong></h3>
+            Ni Joe Satriani ni otros guitarristas vendrán a Uruguay por recibir correos de "por favor venga a Uruguay", por más que ofrezcan su sillón a modo de AirB&B.<br>Por favor a ustedes: dejen de enviar e-mails desde las direcciones de correo de la institución. Ya quedamos en 3 listas negras. Gracias.
+            <h6>06/02/2021</h6>
+            <a href="">Leer más</a>
+            <hr>
+            <br>
+            <h3><strong>Atención alumnos</strong></h3>
+            Queremos recordarles que las "drogas" no son "rock". Seguimos buscando al culpable de dejar una bolsa con marihuana en la sala de profesores.            
+            <h6>29/01/2021</h6>
+            <a href="">Leer más</a>
+            <hr>			
+            <br><br>
+            <a href="">Entradas más antiguas</a>	
+        </div>
+
+        <!--PANTALLA DE REGISTRO, PARA TODOS-->
+        <div class="contenido" id="registroGlobal">
+        <br>
+        Tipo de usuario:<br>
+        <select id="tipoDeUser">
+            <option hidden value="elegir">Elegir</option> <!--FUENTE: sobre usar "hidden" en los tag de <option>: https://stackoverflow.com/questions/22033922/how-to-show-disable-html-select-option-in-by-default-->
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+        </select>
+        <br>
+        Nombre completo:<br><input placeholder="Escriba nombre completo" id="nombreCompletoHTML">
+        <br>
+        Nombre de usuario:<br><input placeholder="Escriba nombre de usuario" id="usernameHTML">
+        <br>
+        Contraseña:<br><input type="password" placeholder="Escriba contraseña" id="crearPassHTML">
+        <br>
+        Repetir contraseña:<br><input type="password" placeholder="Repita contraseña" id="repetirPassHTML"><br>
+        <br>
+        <div id="codigoProfesor">
+        Código para el registro de profesor:
+        <br><input type="password" placeholder="SÓLO EMPLEADOS" id="codigoProfesorInput">
+        </div>
+        <select id="elegirProfesor">
+            <option hidden value="elegir">Elegir profesor</option>
+        </select>
+        <br>
+        <br>
+            <input type="button" value="Registrarme" id="btnCompletarRegistro">
+            <p id=resultadoRegistro></p>
+        </div>
+
+
+
+        <!--ESTADÍSTICAS, PARA ESTUDIANTE-->
+        <div class="contenido" id="statsPE">
+
+        </div>
+
+
+            <!--EJERCICIOS RESUELTOS, PARA ESTUDIANTE-->
+            <div class="contenido" id="ejerciciosResueltosPE">
+            </div>            
+
+            <!--ENTREGAR UN EJERCICIO, PARA ESTUDIANTE-->
+            <div class="contenido" id="entregaPE">
+                <!--Texto por defecto-->
+                <h3>Ningún ejercicio seleccionado.</h3>
+                <h3>Por favor busque un ejercicio para trabajar en esta sección.</h3>
+            </div>
+
+
+            <!--BUSCAR EJERCICIOS, PARA ESTUDIANTE-->
+            <div class="contenido" id="ejerciciosBusquedaPE">
+                Ingrese un texto y presione "Buscar" para encontrar ejercicios no resueltos.<br>
+                Si no ingresa ningún texto: se buscarán todos los ejercicios que tenga asignados.<br>
+                <br><br>
+                <input placeholder="Buscar ejercicios" id="buscarEjsInputHTML"> <input type="button" value="Buscar" id="btnBuscarEjs">
+                <div id="ejerciciosEncontradosHTML">
+                </div>
+            </div>
+
+
+            <!--NIVELAR ALUMNOS, PARA PROFESOR-->
+            <div class="contenido" id="nivelarEstudiantePP">
+            <h3>Nivelar alumnos</h3>
+            <select id="listaEstudiantesNivelHTML">
+            </select>
+            <br>
+            <h3 id="nivelActualEstudianteHTML"></h3>
+            <select id="levelUpEstudianteHTML">
+               <option value="elegir" hidden>Seleccionar nivel</option>
+            </select>
+            <br><br>
+            <input type="button" value="Aplicar cambios" id="btnCambiarNivelHTML">
+        </div>
+
+            
+        <div class="contenido" id="plantearEjercicioPP">
+            <h3>Plantear nuevo ejercicio</h3>
+            Seleccionar nivel<br>
+            <select id="nivelPlantearEjHTML">
+                <option hidden value="elegir">Elegir</option>
+                <option value="inicial">Inicial</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+            <br><br>
+            Título: <input type="text" id="tituloPlantearEjHTML">
+            <br><br>
+            Imagen <input type="file" hidden accept="image/*" id="subirImagenPlantearEjHTML"><input type="button" value="Seleccionar" id="btnsubirImagenPlantearEj"><br><br>
+            <!--el "hidden" está para ocultar los elementos HTML que aparecen por defecto con input type="file", que no quedan bonitos en la página y son redundantes-->
+            <!--con accept="image/*", filtramos la búsqueda de Windows para todo tipo de imágenes (jpg, png, etc)-->
+            <div id="imgPlantearEjHTML"></div>
+            <br><br>
+            Descripción y objetivos:<br>
+            <textarea id="descripcionPlantearEjHTML"></textarea>
+            <br><br>
+            <input type="button" value="Subir ejercicio" id="btnSubirNuevoEjHTML">
+            <br><br>
+            <div id="erroresPlantearEjHTML"></div>
+        </div>
+
+        
+        <!--HACER DEVOLUCIÓN DE EJERCICIOS, PARA PROFESOR-->
+        <div id="devolverEjPP" class="contenido">
+            <h3>Devolución de ejercicios</h3>
+            <select id="alumnosQueEntregaronEjsPPHTML">
+                <option value="elegir" hidden>Elegir alumno</option>
+            </select>
+            <select id="ejsADevolverPPHTML">
+                <option value="elegir" hidden>Elegir ejercicio</option>
+            </select>
+            <div id="ejercicioMostradoADevolverPPHTML"></div>
+        </div>
+
+
+        <div class="contenido" id="statsPP">
+            <!--->
+            <h3>Estadísticas de los alumnos</h3>
+            Entregas totales: 50/100 (50%)
+            <br><br>
+            Mejores alumnos: Pedro Fernandez, 88% de entregas
+            <br><br>
+            -->
+            Seleccione alumno para ver detalles:<br>
+            <select>
+                <option hidden>Seleccionar Alumno</option>
+                <option>Juan Hernandez</option>
+                <option>Pablo Fernandez</option>
+                <option>Tom Scott</option>
+                <option>Luke Skywalker</option>
+            </select>  <button>Seleccionar</button>
+            <br><br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                        Pablo Fernandez
+                        </td>
+                        <td>
+                            Nivel intermedio
+
+                        </td></tr>
+                    <tr><td>
+                    Ejercicios planteados</td><td>30</td>
+            </td></tr>
+            <tr><td>
+                Ejercicios resueltos</td><td> 17
+            </td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+
+        <div id="pie">
+            <a href="https://www.ort.edu.uy">Visite la universidad donde nos volvimos tan inteligentes arre</a>
+        </div><!-- FIN PIE -->
+    </div><!-- FIN CONTENIDO -->
+</div><!-- FIN CONTENEDOR -->
+
+    <!--SCRIPTS-->
+    <script src="../js/objetos.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/codigo.js"></script>
+
+</body>
+
+</html>
