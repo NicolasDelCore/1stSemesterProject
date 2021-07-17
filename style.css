@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: #CD53F4;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+h2{
+  width:60%;
+  float:left;
+}
+
+h4{
+  float:right;
+  font-weight:400;
+  width:30%;
+  margin-top:26px;
+  text-align:right;
+}
+
+/*#aux a {
+  color: #0e1c20;
+}*/
+
+#contenedor {
+  width: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+label{
+  min-width: 80px;
+  text-align:left;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.duracion{
+  float:right;
+}
+
+textarea{
+  min-height:80px;
+}
+
+p.ver-mas {
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: #243F5D;
+}
+
+#logo {
+  margin: 20px;
+  float: left;
+}
+
+/*#aux {
+  float: right;
+  clear: right;
+  padding: 0 24px 10px 0;
+}*/
+
+#navPrincipal a {
+  color: #0e1c20;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+
+/*#aux a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}*/
+
+/*EMPEZAR Y TERMINAR SESIÓN*/
+.sesionLinks {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+
+/*EJERCICIOS EN BUSCADOR*/
+.ejerciciosTitulosBuscadosHTML {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
+
+#navPrincipal {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  max-width: 400px;
+}
+
+#navPrincipal li {
+  font-family: "Merriweather", serif;
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+  margin: 5px;
+  float: left;
+}
+
+#cabezal {
+  background-color: #FA047F;
+}
+
+#cabezal img {
+  width: 100px;
+  float: left;
+  border:5px solid #FFF;
+}
+
+.linkEjercicios{
+  color:blue;
+}
+
+.contenido { /*HAY UN ID QUE YA SE LLAMA "CONTENIDO", ASÍ QUE EL NOMBRE DE ESTA CLASE... HAY QUE CAMBIARLO, aunque no sea problemático que una class y un ID tengan el mismo nombre, no es buena práctica repetir nombres*/
+  /*background-color: #DFDFDF;*/
+  /*width: 590px;*/
+  padding: 20px;
+  float: center;
+  text-align: center;
+}
+
+#contenido img{
+  max-width:100%;
+  margin-bottom: 1%;
+}
+
+#lateral {
+  background-color: #efefef;
+  width: 290px;
+  float: left;
+  padding: 20px;
+}
+
+#lateral,
+#contenido {
+  min-height: 250px;
+}
+
+#pie {
+  background-color: #FA047F;
+  clear: both;
+  padding: 20px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.loginMenu{
+    color:white;
+}
+
+#loginError{
+  text-align: center;
+}
+
+.loginMenu a:link {
+    color: white;
+}
+
+.loginMenu a:visited 
+{
+  color: white;
+}
+
+.container{  
+  text-align: center;
+  width: 500px;  
+  height: 200px;  
+  }  
+
+.pborder{
+  border: 3px solid green;
+  width: 300px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left:auto; /*centrar tabla*/
+  margin-right:auto; /*centrar tabla*/
+  text-align:center;
+}
+
+/*cambio las líneas a negro y aumento el grosor un poquito para que se vea la tabla*/
+table, td {
+  border:3px solid black;
+}
+
+select, textarea {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-family: "Jost", sans-serif;
+  min-width: 200px;
+  border-radius: 5px;
+  font-size:14px;
+}
+
+input[type="button"] {
+  background-color: #FA047F;
+  color: #fff;
+  font-weight:bold;
+}
+
+input[disabled] {
+  background-color:#D3D3D3;
+  color: black;
+  font-weight:bold;
+}
+
+#pie a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.textoAlCentro {
+  text-align: center;
+}
